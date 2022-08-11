@@ -10,7 +10,10 @@ test("no birthdate", () => {
 
 test("has birthdate", () => {
   const birthday = "2000/01/01";
-  const greeting = [`Happy birthday, dear Armstrong!`];
+  const greeting = [
+    "Happy birthday, dear Irish!",
+    "Happy birthday, dear Armstrong!",
+  ];
   const result = solution.email(birthday);
 
   expect(result).toEqual(greeting);
