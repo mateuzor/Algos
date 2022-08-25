@@ -1,16 +1,9 @@
 const Solution = require("./Solution");
 const solution = new Solution();
 
-test("Check strings don't have the same size", () => {
-  const firstString = "anagram";
-  const secondString = "nagram";
-  const result = solution.anagram(firstString, secondString);
-  expect(result).toEqual(false);
-});
-
-test("Check if it's an anagram", () => {
-  const firstString = "anagram";
-  const secondString = "nagaram";
-  const result = solution.anagram(firstString, secondString);
-  expect(result).toEqual(true);
+test("check if it returns the top 2 more frequent elements", () => {
+  const nums = [1, 1, 1, 2, 2, 3];
+  const k = 2;
+  const result = solution.frequentElements(nums, k);
+  expect(result).toEqual([1, 2]);
 });
