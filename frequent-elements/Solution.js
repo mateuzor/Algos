@@ -17,6 +17,7 @@ class Solution {
     //  [ [], [], [], [], [], [] ]
 
     for (const key in seen) {
+      console.log(seen[key]);
       let count = seen[key];
       bucket[count].push(key);
     }
@@ -24,6 +25,7 @@ class Solution {
 
     let res = [];
     for (let i = bucket.length - 1; i >= 0; i--) {
+      // [ [], [ '3' ], [ '2' ], [ '1' ], [], [] ] <-
       if (bucket[i].length === 0) {
         // desconsider the empty arrays
         continue;
