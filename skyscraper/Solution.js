@@ -1,11 +1,11 @@
 class Solution {
-  getTallestBuilding(buildings) {
+  getTallestBuilding(skyscrapers) {
     let tallest = 0;
-    for (let i = 0; i < buildings[0].length; i++) {
+    for (let i = 0; i < skyscrapers[0].length; i++) {
       let columnMax = 0;
-      for (let j = 0; j < buildings.length; j++) {
-        if (buildings[j][i] > columnMax) {
-          columnMax = buildings[j][i];
+      for (let j = 0; j < skyscrapers.length; j++) {
+        if (skyscrapers[j][i] > columnMax) {
+          columnMax = skyscrapers[j][i];
         }
       }
       tallest += columnMax;
