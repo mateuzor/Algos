@@ -17,7 +17,6 @@ class Solution {
     //  [ [], [], [], [], [], [] ]
 
     for (const key in seen) {
-      console.log(seen[key]);
       let count = seen[key];
       bucket[count].push(key);
     }
