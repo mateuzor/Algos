@@ -18,7 +18,6 @@ class Solution {
 
       count = Math.max(count, currCount);
     }
-
     return count;
   }
 }
