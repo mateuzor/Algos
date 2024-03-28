@@ -1,12 +1,16 @@
 class Solution {
   strComp(string) {
-    var currentChar = "";
-    var counter = "";
-    var maxCounterer = 1;
+    if (string.length === 0) {
+      return "";
+    }
+
+    var currentChar = string[0];
+    var counter = 1;
+    var maxCounter = 1;
     var compressed = "";
-    for (var i = 0; i < string.length; i++) {
+
+    for (var i = 1; i < string.length; i++) {
       if (currentChar !== string[i]) {
-        console.log(currentChar, string[i], i);
         compressed = compressed + currentChar + counter;
         maxCounter = Math.max(maxCounter, counter);
         currentChar = string[i];
@@ -15,6 +19,7 @@ class Solution {
         counter++;
       }
     }
+
     compressed = compressed + currentChar + counter;
     maxCounter = Math.max(maxCounter, counter);
 
